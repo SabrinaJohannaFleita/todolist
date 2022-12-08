@@ -3,6 +3,7 @@ import './App.css';
 import { Formulario } from './components/formulario';
 import { useState } from 'react';
 import { Tarea } from './components/Tarea'
+import Navbar from './components/Navbar/Navbar';
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
   }
   return (
     <>
+    <div className='contenedorNav'>
+    <Navbar/>
+    </div>
     <div className='contenedorPrincipal'>
       <h1>To do List</h1>
       <div className='contenedorFormulario'>
