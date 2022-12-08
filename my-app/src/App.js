@@ -32,15 +32,15 @@ function App() {
     setTarea(e.target.value)
   
   }
-  //function onActualizarTarea(objEditarTarea){
-    //const {id, tarea} = objEditarTarea
+  function onActualizarTarea(objEditarTarea){
+    const {id, tarea} = objEditarTarea
 
-    //const temp = [...listadoTareas]
-     //const elemento = temp.find(item => item.id === id)
-     //elemento.tarea = tarea
+    const temp = [...listadoTareas]
+     const elemento = temp.find(item => item.id === id)
+     elemento.tarea = tarea
 
-     //setListadoTareas(temp)
-  //}
+     setListadoTareas(temp)
+  }
   function onBorrarTarea(id){
     const temp = listadoTareas.filter(item => item.id !== id)
     setListadoTareas(temp)
@@ -65,7 +65,7 @@ function App() {
           key={tarea.id}
           id={tarea.id}
           tarea={tarea} 
-          //onActualizarTarea={onActualizarTarea}
+          onActualizarTarea={onActualizarTarea}
           onBorrarTarea={onBorrarTarea}
           />
         ))
@@ -77,6 +77,7 @@ function App() {
 
     </>
   );
+  
 }
 
 export default App;
